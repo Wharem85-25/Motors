@@ -8,8 +8,8 @@ import { StyleSheet } from 'react-native';
 export default function App() {
   return (
     <NavigationContainer>
-      <NavigationDrawer />
-      {/* <NavigationTab /> */}
+      {/* <NavigationDrawer /> */}
+      <NavigationTab />
       {/* <NavigationStack /> */}
     </NavigationContainer>
   );
