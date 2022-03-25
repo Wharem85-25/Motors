@@ -2,7 +2,6 @@ import React from 'react'
 import HomeScreen from '../screens/HomeScreen';
 import MenuScreen from '../screens/MenuScreen';
 import { Image } from 'react-native'
-import Icon from "react-native-vector-icons/FontAwesome5";
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 const Tab = createMaterialTopTabNavigator();
@@ -13,14 +12,16 @@ export default function NavigationTab() {
 			<Tab.Screen name="Home" component={HomeScreen} options={{
 				tabBarLabel: "",
 				tabBarStyle: {
-					backgroundColor: "#878f92"
+					backgroundColor: "#102127",
+					paddingTop: 15,
+					paddingBottom: 10
 				},
 				tabBarIcon: () => renderLogo()
 			}} />
 			<Tab.Screen name="Menu" component={MenuScreen} options={{
 				tabBarLabel: "",
 				tabBarStyle: {
-					backgroundColor: "#878f92"
+					backgroundColor: "#102127",
 				},
 				tabBarIcon: () => renderMenu()
 			}} />
@@ -36,6 +37,6 @@ function renderLogo() {
 
 function renderMenu() {
 	return(
-		<Image source={require('../assets/menu.png')} style={{width: 30, height: 30, left: 45}} />
+		<Image source={require('../assets/menun.png')} style={{width: 30, height: 30, left: 45}} />
 	)
 }

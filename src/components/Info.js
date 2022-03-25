@@ -8,55 +8,35 @@ export default function Info() {
 				<Image source={require('../assets/safety.png')} style={styles.icon} />
 				<Text style={styles.title}>Safety</Text>
 				<Text style={styles.text}>
-					{`
-					Electric Cars are extremely
-					reliable and secure. After all,
-					electricity is not flammable!`
-					}
+					{`Electric Cars are extremely reliable \nand secure. After all,electricity is not flammable!`}
 				</Text>
 			</View>
 			<View style={styles.contentView}>
 				<Image source={require('../assets/fuel.png')} style={styles.icon} />
 				<Text style={styles.title}>Fuel Cost</Text>
 				<Text style={styles.text}>
-					{`
-					Electricity is known for its relatively
-					cheap cost and, as a result, will be much
-					more affordable.`
-					}
+					{`Electricity is known for its relatively \n cheap cost and, as a result, will be much more affordable.`}
 				</Text>
 			</View>
 			<View style={styles.contentView}>
 				<Image source={require('../assets/car.png')} style={styles.icon} />
 				<Text style={styles.title}>Driver Fatigue & Silence</Text>
 				<Text style={styles.text}>
-					{`
-					Less noise means living in
-					large cities with electric cars is
-					much more comfortable.`
-					}
+					{`Less noise means living in large cities \n with electric cars is much more comfortable.`}
 				</Text>
 			</View>
 			<View style={styles.contentView}>
 				<Image source={require('../assets/oil.png')} style={styles.icon} />
 				<Text style={styles.title}>Maintenance</Text>
 				<Text style={styles.text}>
-					{`
-					Simplified design – repairs are
-					less expensive and take less time.`
-					}
+					{`Simplified design – repairs are less expensive \n and take less time.`}
 				</Text>
 			</View>
 			<View style={styles.contentView}>
 				<Image source={require('../assets/eco.png')} style={styles.icon} />
 				<Text style={styles.title}>Environment</Text>
 				<Text style={styles.text}>
-					{`
-					Owners of electric or hybrid vehicles have
-					a much lower cost to run. The fuel cost to
-					run an EV is roughly one third the cost of
-					a gasoline powered car.`
-					}
+					{`Owners of electric or hybrid vehicles have a much \n lower cost to run. The fuel cost to run an \n EV is roughly one third the cost of a gasoline powered car.`}
 				</Text>
 			</View>
 		</ScrollView>
@@ -65,7 +45,7 @@ export default function Info() {
 
 const styles = StyleSheet.create({
 	contentInfo: {
-		height: 2000
+		height: 1800
 	},
 	contentView: {
 		alignItems: "center",
@@ -83,6 +63,7 @@ const styles = StyleSheet.create({
 		left: -5
 	},
 	text: {
+		textAlign: "center",
 		left: -10,
 		fontSize: 18
 	}

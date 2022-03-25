@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, Image, StyleSheet, ScrollView, Platform } from 'react-native'
 import React from 'react'
 
 export default function ImagesTitle() {
@@ -20,11 +20,12 @@ const styles = StyleSheet.create({
 	containerImage:{
 		width: "100%",
 		height: 1000,
-		fontFamily: "rubik"
+		fontFamily: "rubik",
 	},
 	containerTitle:{
 		paddingTop: 25,
-		marginBottom: 100
+		marginBottom: 100,
+		alignItems: "center"
 	},
 	title: {
 		textTransform: "uppercase",
@@ -35,7 +36,8 @@ const styles = StyleSheet.create({
 	},
 	containerImg: {
 		paddingLeft: 15,
-		height: 960
+		height: 960,
+		alignItems: "center"
 	},
 	img: {
 		width: 300,
@@ -49,7 +51,8 @@ const styles = StyleSheet.create({
 		zIndex: 5,
 		position: "absolute",
 		top: 179,
-		right: 20,
+		right: Platform.OS === "android" ? 20 : 0,
+		left: Platform.OS === "web" ? 920 : 170,
 		borderWidth: 20,
 		borderStyle: "solid",
 		borderColor: "white",
