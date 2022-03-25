@@ -1,10 +1,15 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { View, ScrollView } from 'react-native'
+import ImagesTitle from '../components/ImagesTitle';
+import Info from '../components/Info';
 
 export default function HomeScreen() {
 	return (
 		<View>
-			<Text>HomeScreen</Text>
+			<ScrollView>
+				<ImagesTitle />
+				<Info />
+			</ScrollView>
 		</View>
 	)
 }
