@@ -19,7 +19,7 @@ export default function ImagesTitle() {
 const styles = StyleSheet.create({
 	containerImage:{
 		width: "100%",
-		height: 1000,
+		height: 1150,
 		fontFamily: "rubik",
 	},
 	containerTitle:{
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 		zIndex: 5,
 		position: "absolute",
 		top: 179,
-		right: Platform.OS === "android" ? 20 : 0,
+		right: Platform.OS === "web" ? 0 : 20,
 		left: Platform.OS === "web" ? 920 : 170,
 		borderWidth: 20,
 		borderStyle: "solid",

@@ -1,27 +1,41 @@
-import React from 'react'
-import { View, Text, ScrollView, StyleSheet, Image, Platform } from 'react-native'
+import React, {useState} from 'react'
+import { View, Text, ScrollView, StyleSheet, Image, Platform, TouchableOpacity } from 'react-native'
 import ProductsCar from '../components/ProductsCar';
+import ProductCar2 from '../components/ProductCar2';
 
 export default function FeaturedItems() {
+	const [toggleCar, setToggleCar] = useState(true);
+	const [toggleCar2, setToggleCar2] = useState(false);
+
+	const handlePress2 = () => {
+		if(Platform === "web") {
+		setToggleCar2(!toggleCar2);
+		setToggleCar(!toggleCar)
+		} else {
+			setToggleCar2(!toggleCar2)
+		}
+	}
+
 	return (
 		<ScrollView style={styles.contentFeatured} >
 			<View style={styles.contentArrow}>
 				<Text style={styles.title} >Featured Items</Text>
-				<View style={styles.radiusArrow}>
+				<TouchableOpacity style={styles.radiusArrow} onPress={handlePress2} >
 					<Image style={styles.arrowLeft} source={require('../assets/arrowL.png')} />
-				</View>
-				<View style={styles.radiusArrowR}>
+				</TouchableOpacity>
+				<TouchableOpacity style={styles.radiusArrowR} onPress={handlePress2}>
 					<Image style={styles.arrowRight} source={require('../assets/arrowR.png')} />
-				</View>
+				</TouchableOpacity>
 			</View>
-			<ProductsCar />
+			{toggleCar2 && <ProductCar2 />}
+			{toggleCar && <ProductsCar />}
 		</ScrollView>
 	)
 }
 
 const styles = StyleSheet.create({
 	contentFeatured: {
-		height: 800,
+		height: Platform.OS === "web" ? 950 : 700,
 		backgroundColor: "#102127"
 	},
 	contentArrow: {

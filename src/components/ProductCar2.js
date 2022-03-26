@@ -1,16 +1,16 @@
-import React from 'react'
 import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Platform } from 'react-native'
+import React from 'react'
 
-export default function ProductsCar() {
-	return (
+export default function ProductCar2() {
+	return(
 		<ScrollView style={styles.contentProduct}>
 			<View style={styles.contentDetailCar}>
-				<Image style={styles.image} source={{ uri: "https://www.elcarrocolombiano.com/wp-content/uploads/2020/05/202015-NISSAN-KICK-2022-PORTADA.jpg"}} />
+				<Image style={styles.image} source={{ uri: "https://gossipvehiculo.com/wp-content/uploads/2021/09/Toyota-Prius-2022-1.png"}} />
 				<View style={styles.detailCar}>
-					<Text style={styles.marca}>Nissan 2022</Text>
-					<Text style={styles.modelo}>leaf 292</Text>
-					<Text style={styles.precio}>Price</Text>
-					<Text style={styles.price}>$32,400</Text>
+					<Text style={styles.marca}>Toyota 2021</Text>
+					<Text style={styles.modelo}>Prius 320</Text>
+					<Text style={styles.precio}>Msrp:</Text>
+					<Text style={styles.price}>$30,999</Text>
 					<TouchableOpacity style={styles.button}>
 						<Text style={styles.detailText}>Details</Text>
 					</TouchableOpacity>
