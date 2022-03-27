@@ -18,9 +18,9 @@ export default function VistaMenu() {
 					data={inventario}
 					defaultButtonText='INVENTARIO'
 					buttonStyle={styles.select}
-					buttonTextStyle={{color: "white", fontSize: 20}}
-					dropdownStyle={{backgroundColor: "#000", width: "100%"}}
-					rowTextStyle={{color: "white", fontSize: 16}}
+					buttonTextStyle={styles.bottonStyle}
+					dropdownStyle={styles.dropDownStyle}
+					rowTextStyle={styles.rowTextStyle}
 					onSelect={(selectedItem, index) => {
 						console.log(selectedItem, index)
 					}}
@@ -35,9 +35,9 @@ export default function VistaMenu() {
 					data={pages}
 					defaultButtonText='PAGES'
 					buttonStyle={styles.select}
-					buttonTextStyle={{color: "white", fontSize: 20}}
-					dropdownStyle={{backgroundColor: "#000", width: "100%"}}
-					rowTextStyle={{color: "white", fontSize: 16}}
+					buttonTextStyle={styles.bottonStyle}
+					dropdownStyle={styles.dropDownStyle}
+					rowTextStyle={styles.rowTextStyle}
 					onSelect={(selectedItem, index) => {
 						console.log(selectedItem, index)
 					}}
@@ -52,9 +52,9 @@ export default function VistaMenu() {
 					data={blog}
 					defaultButtonText='BLOG'
 					buttonStyle={styles.select}
-					buttonTextStyle={{color: "white", fontSize: 20}}
-					dropdownStyle={{backgroundColor: "#000", width: "100%"}}
-					rowTextStyle={{color: "white", fontSize: 16}}
+					buttonTextStyle={styles.bottonStyle}
+					dropdownStyle={styles.dropDownStyle}
+					rowTextStyle={styles.rowTextStyle}
 					onSelect={(selectedItem, index) => {
 						console.log(selectedItem, index)
 					}}
@@ -90,8 +90,27 @@ const styles = StyleSheet.create({
 		paddingBottom: 50,
 		textTransform: "uppercase"
 	},
+	container: {
+		marginLeft: 0
+	},
 	select: {
 		backgroundColor: "#000",
-		marginBottom: 40
+		marginBottom: 40,
+		width: 300
+	},
+	bottonStyle: {
+		color: "white",
+		fontSize: 20,
+	},
+	dropDownStyle: {
+		backgroundColor: "#000",
+		width: "100%",
+	},
+	rowTextStyle: {
+		color: "white",
+		fontSize: 16,
+		width: 400,
+		marginBottom: 15,
+		marginTop: 15,
 	}
 })

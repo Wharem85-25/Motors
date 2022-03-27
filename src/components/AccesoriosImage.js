@@ -1,15 +1,17 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, ScrollView, FlatList, StyleSheet, Platform } from 'react-native'
+import { View, Text, TouchableOpacity, Image, ScrollView, FlatList, StyleSheet } from 'react-native'
 import { DATAaccesories } from '../utils/inventarioDb'
 
 const Item = ({ name, price, image }) => (
 	<View style={styles.containerAccesories}>
-		<TouchableOpacity >
-			<Image source={{ uri: image }} style={styles.img} />
-		</TouchableOpacity>
-		<View style={styles.datos}>
-			<Text style={styles.names} >{name}</Text>
-			<Text style={styles.prices} >{price}</Text>
+		<View>
+			<TouchableOpacity >
+				<Image source={{ uri: image }} style={styles.img} />
+			</TouchableOpacity>
+			<View style={styles.datos}>
+				<Text style={styles.names} >{name}</Text>
+				<Text style={styles.prices} >{price}</Text>
+			</View>
 		</View>
 	</View>
 )
@@ -29,6 +31,7 @@ export default function AccesoriosImage() {
 				data={DATAaccesories}
 				renderItem={renderItem}
 				keyExtractor={item => item.id}
+				style={styles.cont}
 			/>
 		</ScrollView>
 	)
@@ -40,7 +43,7 @@ const styles = StyleSheet.create({
 	},
 	containerAccesories: {
 		alignItems: "center",
-		marginBottom: 100
+		marginBottom: 100,
 	},
 	img: {
 		width: 300,

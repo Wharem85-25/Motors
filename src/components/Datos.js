@@ -9,14 +9,22 @@ export default function Datos() {
 			</View>
 			<View style={styles.line}></View>
 			<View style={styles.contentDatos}>
-				<Text style={styles.num}>15 514</Text>
-				<Text style={styles.text}>Cars sold</Text>
-				<Text style={styles.num}>1 201</Text>
-				<Text style={styles.text}>cars for sale</Text>
-				<Text style={styles.num}>2 150</Text>
-				<Text style={styles.text}>reviews</Text>
-				<Text style={styles.num}>3 800+</Text>
-				<Text style={styles.text}>visitors for day</Text>
+				<View style={styles.flex}>
+					<Text style={styles.num}>15 514</Text>
+					<Text style={styles.text}>Cars sold</Text>
+				</View>
+				<View style={styles.flex}>
+					<Text style={styles.num}>1 201</Text>
+					<Text style={styles.text}>cars for sale</Text>
+				</View>
+				<View style={styles.flex}>
+					<Text style={styles.num}>2 150</Text>
+					<Text style={styles.text}>reviews</Text>
+				</View>
+				<View style={styles.flex}>
+					<Text style={styles.num}>3 800+</Text>
+					<Text style={styles.text}>visitors for day</Text>
+				</View>
 			</View>
 		</ScrollView>
 	)
@@ -24,7 +32,7 @@ export default function Datos() {
 
 const styles = StyleSheet.create({
 	container: {
-		height: Platform.OS === "web" ? 1050 : 1000,
+		height: Platform.OS === "web" ? 500 : 1000,
 		backgroundColor: "#0d46ff",
 	},
 	contentTitle: {
@@ -48,19 +56,26 @@ const styles = StyleSheet.create({
 		height: 700,
 		top: Platform.OS === "web" ? 100 : 60,
 		alignItems: Platform.OS ==="web" ? "center" : "flex-start",
-		left: Platform.OS === "web" ? 0 : 20
+		left: Platform.OS === "web" ? 0 : 20,
+		flex: 1,
+		flexDirection: Platform.OS === "web" ? "row" : "column"
+	},
+	flex: {
+		marginLeft: Platform.OS === "web" ? 220 : 0,
 	},
 	num: {
 		color: "white",
-		fontSize: 50,
+		fontSize: Platform.OS === "web" ? 60 :50,
 		fontWeight: "bold",
-		marginBottom: 10
+		marginBottom: 10,
+		fontFamily: "rubik"
 	},
 	text: {
 		color: "white",
-		fontSize: 20,
+		fontSize: Platform.OS === "web" ? 30 : 20,
 		textTransform: "uppercase",
 		fontWeight: "bold",
-		marginBottom: 60
+		marginBottom: 60,
+		fontFamily: "rubik"
 	}
 })

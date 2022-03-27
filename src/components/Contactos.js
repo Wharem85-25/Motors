@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet, Platform } from 'react-native'
+import { ScrollView, View, Text, Image, StyleSheet, Platform } from 'react-native'
 import { useFonts } from 'expo-font'
 
 export default function Contactos() {
@@ -11,21 +11,23 @@ export default function Contactos() {
 		return null;
 	}
 	return (
-		<View style={styles.content} >
-			<View style={styles.containerContacts}>
-				<Image style={styles.imageContact} source={{ uri: "https://img.icons8.com/ios/50/ffffff/point-objects.png"}} />
-				<Text style={styles.title}>Address</Text>
-				<Text style={styles.text}>1010 Avenue of the Moon New York, NY 10018 US.</Text>
-			</View>
-			<View style={styles.containerContacts}>
-				<Image style={styles.imageContact} source={{ uri: "https://img.icons8.com/ios-filled/50/ffffff/phone.png"}} />
-				<Text style={styles.title}>Phone</Text>
-				<Text style={styles.text}>+1 628 123 4000</Text>
-			</View>
-			<View style={styles.containerContacts}>
-				<Image style={styles.imageContact} source={{ uri: "https://img.icons8.com/ios/50/ffffff/mail.png"}} />
-				<Text style={styles.title}>Email</Text>
-				<Text style={styles.text}>wharem85@hotmail.com</Text>
+		<ScrollView style={styles.content} >
+			<View style={styles.flex}>
+				<View style={styles.containerContacts}>
+					<Image style={styles.imageContact} source={{ uri: "https://img.icons8.com/ios/50/ffffff/point-objects.png"}} />
+					<Text style={styles.title}>Address</Text>
+					<Text style={styles.text}>1010 Avenue of the Moon New York, NY 10018 US.</Text>
+				</View>
+				<View style={styles.containerContacts}>
+					<Image style={styles.imageContact} source={{ uri: "https://img.icons8.com/ios-filled/50/ffffff/phone.png"}} />
+					<Text style={styles.title}>Phone</Text>
+					<Text style={styles.text}>+1 628 123 4000</Text>
+				</View>
+				<View style={styles.containerContacts}>
+					<Image style={styles.imageContact} source={{ uri: "https://img.icons8.com/ios/50/ffffff/mail.png"}} />
+					<Text style={styles.title}>Email</Text>
+					<Text style={styles.text}>wharem85@hotmail.com</Text>
+				</View>
 			</View>
 			<View style={styles.containerRedes}>
 				<Image style={styles.imgRedes1} source={{ uri: "https://img.icons8.com/ios-glyphs/30/ffffff/facebook-new.png"}} />
@@ -38,22 +40,28 @@ export default function Contactos() {
 			<View style={styles.footer}>
 				<Text style={styles.textFooter}>2022 Wharem85 - is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</Text>
 			</View>
-		</View>
+		</ScrollView>
 	)
 }
 
 const styles = StyleSheet.create({
 	content: {
-		alignItems: "center",
-		height: 1000,
+		height: Platform.OS === "web" ? 600 : 1000,
 		backgroundColor: "#000"
+	},
+	flex: {
+		flex: 1,
+		flexDirection: Platform.OS === "web" ? "row" : "column",
+		left: Platform.OS === "web" ? "10%" : 0,
+		alignItems: "center",
+		top: Platform.OS === "web" ? 100 : 0
 	},
 	containerContacts: {
 		alignItems: "center",
 		height: 100,
 		marginTop: 100,
 		width: 220,
-		marginBottom: 10
+		marginLeft: Platform.OS === "web" ? 200 : 0,
 	},
 	imageContact: {
 		width: 60,
@@ -77,7 +85,10 @@ const styles = StyleSheet.create({
 	containerRedes: {
 		flex: 1,
 		flexDirection: "row",
-		top: 130,
+		top: Platform.OS === "web" ? 300 : 100,
+		alignItems: "center",
+		paddingLeft: Platform.OS === "web" ? 0 : 65,
+		left: Platform.OS === "web" ? "40%" : 0,
 	},
 	imgRedes: {
 		width: 30,
@@ -89,21 +100,23 @@ const styles = StyleSheet.create({
 		height: 30
 	},
 	line: {
-		width: "80%",
+		alignItems: "center",
+		width: "100%",
 		height: 1,
 		backgroundColor: "#889093",
 		position: "absolute",
-		top: 850
+		top: Platform.OS === "web" ? 550 : 800
 	},
 	footer: {
-		height: 300,
-		width: "80%",
+		height: Platform.OS === "web" ? 100 : 300,
+		width: "100%",
 	},
 	textFooter: {
 		color: "#889093",
-		fontSize: 14,
+		fontSize: Platform.OS === "web" ? 16 : 14,
 		fontWeight: "bold",
 		position: "relative",
-		top: 200
+		textAlign: "left",
+		top: Platform.OS === "web" ? 380 : 200
 	}
 })
