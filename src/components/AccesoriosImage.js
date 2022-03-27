@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, ScrollView, FlatList, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet } from 'react-native'
 import { DATAaccesories } from '../utils/inventarioDb'
 
 const Item = ({ name, price, image }) => (
@@ -26,20 +26,20 @@ export default function AccesoriosImage() {
 	)
 
 	return (
-		<ScrollView style={styles.content}>
+		<View style={styles.content}>
 			<FlatList
 				data={DATAaccesories}
 				renderItem={renderItem}
 				keyExtractor={item => item.id}
 				style={styles.cont}
 			/>
-		</ScrollView>
+		</View>
 	)
 }
 
 const styles = StyleSheet.create({
 	content: {
-		height: 1500,
+		height: 1600,
 	},
 	containerAccesories: {
 		alignItems: "center",

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, ScrollView, FlatList, StyleSheet, Platform } from 'react-native'
+import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, Platform } from 'react-native'
 import { DATA } from '../utils/inventarioDb';
 
 const Item = ({ marca, modelo, velocidad, consumo, carga, tiempo, image1 }) => (
@@ -47,13 +47,13 @@ export default function InfoCar() {
 	)
 
 	return (
-		<ScrollView style={styles.container}>
+		<View style={styles.container}>
 			<FlatList
 				data={DATA}
 				renderItem={renderItem}
 				keyExtractor={item => item.id}
 			/>
-		</ScrollView>
+		</View>
 	)
 }
 

@@ -1,4 +1,3 @@
-import 'react-native-gesture-handler';
 import NavigationTab from './src/navigation/NavigationTab';
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet } from 'react-native';
