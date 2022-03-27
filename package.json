@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "build": "expo start --web"
+    "build-static-webapp": "expo build:web"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",
