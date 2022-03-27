@@ -1,8 +1,8 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font'
 
-export default function Inventario() {
+export default function Accesorios() {
 	const [loaded] = useFonts({
 		rubik: require('../../assets/fonts/Rubik-VariableFont_wght.ttf'),
 	});
@@ -14,9 +14,9 @@ export default function Inventario() {
 	return (
 		<ScrollView style={styles.container}>
 			<View style={styles.contentTitle}>
-				<Text style={styles.title}>Recently Added</Text>
+				<Text style={styles.title}>Ev accessories</Text>
 				<TouchableOpacity style={styles.contentButton}>
-					<Text style={styles.textButton}>View All Inventary</Text>
+					<Text style={styles.textButton}>online Shop</Text>
 				</TouchableOpacity>
 			</View>
 		</ScrollView>
@@ -25,7 +25,7 @@ export default function Inventario() {
 
 const styles = StyleSheet.create({
 	container: {
-		height: Platform === "web" ? 100 : 300
+		height: 300
 	},
 	contentTitle: {
 		width: "100%",
@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
 		alignItems: "center"
 	},
 	textButton: {
-		fontSize: 18,
-		paddingTop: 16,
+		fontSize: 22,
+		paddingTop: 12,
 		color: "#0d46ff",
 		fontFamily: 'rubik',
 		fontWeight: "bold",

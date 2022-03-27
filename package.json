@@ -17,6 +17,7 @@
     "@react-navigation/native": "^5.9.8",
     "@react-navigation/stack": "^5.14.9",
     "expo": "^44.0.6",
+    "expo-font": "~10.0.4",
     "expo-status-bar": "~1.2.0",
     "font": "0.0.4",
     "react": "17.0.1",
@@ -30,7 +31,7 @@
     "react-native-tab-view": "^3.1.1",
     "react-native-vector-icons": "8.1.0",
     "react-native-web": "0.17.1",
-    "expo-font": "~10.0.4"
+    "react-native-maps": "0.29.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

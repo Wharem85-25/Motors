@@ -59,13 +59,14 @@ export default function InfoCar() {
 
 const styles = StyleSheet.create({
 	container: {
-		height: Platform.OS === "web" ? 6000 : 3500,
+		height: Platform.OS === "web" ? 5700 : 3500,
 	},
 	contentInfo: {
 		width: "95%",
 		height: Platform.OS === "web" ? 700 : 400,
 		paddingLeft: 10,
-		marginBottom: 25
+		marginBottom: 25,
+		top: 0
 	},
 	contentImage: {
 		alignItems: "center"

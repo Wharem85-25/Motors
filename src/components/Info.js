@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, ScrollView, StyleSheet } from 'react-native'
+import { View, Text, Image, ScrollView, StyleSheet, Platform } from 'react-native'
 
 export default function Info() {
 	return (
@@ -66,6 +66,6 @@ const styles = StyleSheet.create({
 		textAlign: "center",
 		left: -10,
 		fontSize: 18,
-		width: 300
+		width: Platform.OS === "web" ? 400 : 300
 	}
 })

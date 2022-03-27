@@ -1,7 +1,17 @@
-import { View, Text, Image, StyleSheet, ScrollView, Platform } from 'react-native'
 import React from 'react'
+import { View, Text, Image, StyleSheet, ScrollView, Platform } from 'react-native'
+import { useFonts } from 'expo-font'
 
 export default function ImagesTitle() {
+	const [loaded] = useFonts({
+		rubik: require('../../assets/fonts/Rubik-VariableFont_wght.ttf'),
+	});
+
+	if(!loaded) {
+		return null;
+	}
+
+
 	return (
 		<ScrollView style={styles.containerImage}  >
 			<View style={styles.containerTitle}>
@@ -19,8 +29,7 @@ export default function ImagesTitle() {
 const styles = StyleSheet.create({
 	containerImage:{
 		width: "100%",
-		height: 1150,
-		fontFamily: "rubik",
+		height: 1100,
 	},
 	containerTitle:{
 		paddingTop: 25,
@@ -30,12 +39,12 @@ const styles = StyleSheet.create({
 	title: {
 		textTransform: "uppercase",
 		fontSize: 42,
+		fontFamily: "rubik",
 		fontWeight: "bold",
 		lineHeight: 50,
 		color: "#000"
 	},
 	containerImg: {
-		paddingLeft: 15,
 		height: 960,
 		alignItems: "center"
 	},
@@ -51,10 +60,8 @@ const styles = StyleSheet.create({
 		zIndex: 5,
 		position: "absolute",
 		top: 179,
-		right: Platform.OS === "web" ? 0 : 20,
-		left: Platform.OS === "web" ? 920 : 170,
+		left: Platform.OS === "web" ? 920 : 160,
 		borderWidth: 20,
-		borderStyle: "solid",
 		borderColor: "white",
 	},
 	img3: {

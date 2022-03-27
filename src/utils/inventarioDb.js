@@ -88,3 +88,24 @@ export const DATA =[
 		image2: ""
 	}
 ]
+
+export const DATAaccesories = [
+	{
+		id: 1,
+		name: "Wallbox type 17.4kW",
+		price: "$380.00",
+		image: "https://motors.stylemixthemes.com/ev-dealership/wp-content/uploads/sites/21/2021/11/wallbox-pulsar-plus-ocpp-evc-5m-type-1-74kw-white-350x356.jpg"
+	},
+	{
+		id: 2,
+		name: "Zeta Type XL Racing seat",
+		price: "$800.00 $735.99",
+		image: "https://motors.stylemixthemes.com/ev-dealership/wp-content/uploads/sites/21/2021/11/products-1780-350x356.jpg"
+	},
+	{
+		id: 3,
+		name: "Wallbox eMH3",
+		price: "$3,465.00",
+		image: "https://motors.stylemixthemes.com/ev-dealership/wp-content/uploads/sites/21/2021/11/1-350x356.jpg"
+	}
+]

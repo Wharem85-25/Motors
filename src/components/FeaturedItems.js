@@ -8,12 +8,8 @@ export default function FeaturedItems() {
 	const [toggleCar2, setToggleCar2] = useState(false);
 
 	const handlePress2 = () => {
-		if(Platform === "web") {
 		setToggleCar2(!toggleCar2);
 		setToggleCar(!toggleCar)
-		} else {
-			setToggleCar2(!toggleCar2)
-		}
 	}
 
 	return (
