@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, Platform } from 'react-native'
+import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Platform } from 'react-native'
 
 export default function ProductsCar() {
 	return (

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, ScrollView, StyleSheet, Image, Platform, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, Image, Platform, TouchableOpacity, ScrollView } from 'react-native'
 import ProductsCar from '../components/ProductsCar';
 import ProductCar2 from '../components/ProductCar2';
 
@@ -13,7 +13,7 @@ export default function FeaturedItems() {
 	}
 
 	return (
-		<ScrollView style={styles.contentFeatured} >
+		<ScrollView style={styles.contentFeatured} listKey={5} >
 			<View style={styles.contentArrow}>
 				<Text style={styles.title} >Featured Items</Text>
 				<TouchableOpacity style={styles.radiusArrow} onPress={handlePress2} >

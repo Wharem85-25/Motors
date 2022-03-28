@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet,ScrollView, SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font'
 
 export default function Accesorios() {
@@ -12,14 +12,14 @@ export default function Accesorios() {
 	}
 
 	return (
-		<ScrollView style={styles.container}>
+		<SafeAreaView style={styles.container} >
 			<View style={styles.contentTitle}>
 				<Text style={styles.title}>Ev accessories</Text>
 				<TouchableOpacity style={styles.contentButton}>
 					<Text style={styles.textButton}>online Shop</Text>
 				</TouchableOpacity>
 			</View>
-		</ScrollView>
+		</SafeAreaView>
 	)
 }
 

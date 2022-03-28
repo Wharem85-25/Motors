@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, StyleSheet, Platform } from 'react-native'
+import { View, Text, StyleSheet, Platform, ScrollView } from 'react-native'
 import React from 'react'
 
 export default function Datos() {

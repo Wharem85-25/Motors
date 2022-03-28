@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, Platform } from 'react-native'
+import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, Platform, SafeAreaView } from 'react-native'
 import { DATA } from '../utils/inventarioDb';
 
 const Item = ({ marca, modelo, velocidad, consumo, carga, tiempo, image1 }) => (

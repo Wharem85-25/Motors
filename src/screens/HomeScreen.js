@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, ScrollView, StyleSheet} from 'react-native'
+import { View, StyleSheet, SafeAreaView} from 'react-native'
 import ImagesTitle from '../components/ImagesTitle';
 import Info from '../components/Info';
 import FeaturedItems from '../components/FeaturedItems';
 import Inventario from '../components/Inventario';
 import InfoCar from '../components/InfoCar';
 import Datos from '../components/Datos';
-import Text from '../components/Texto';
+import Texto from '../components/Texto';
 import Accesorios from '../components/Accesorios';
 import AccesoriosImage from '../components/AccesoriosImage';
 import Contactanos from '../components/Contactanos';
@@ -24,27 +24,22 @@ export default function HomeScreen() {
 	}
 
 	return (
-		<View style={styles.font}>
-			<ScrollView>
+		<SafeAreaView style={styles.font}>
+			<View style={styles.imagesTitle}>
 				<ImagesTitle />
-				<Info />
-				<FeaturedItems />
-				<Inventario />
-				<InfoCar />
-				<Datos />
-				<Text />
-				<Accesorios />
-				<AccesoriosImage />
-				<Contactanos />
-				<Mapa />
-				<Contactos />
-			</ScrollView>
-		</View>
+			</View>
+		</SafeAreaView>
 	)
 }
 
 const styles = StyleSheet.create({
 	font: {
-		fontFamily: "rubik"
+		fontFamily: "rubik",
 	},
+	imagesTitle: {
+		height: 800
+	},
+	info: {
+		height: 600
+	}
 })

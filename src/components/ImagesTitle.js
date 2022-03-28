@@ -1,6 +1,17 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet, ScrollView, Platform } from 'react-native'
 import { useFonts } from 'expo-font'
+import Info from "../components/Info"
+import FeaturedItems from '../components/FeaturedItems'
+import Inventario from '../components/Inventario';
+import InfoCar from '../components/InfoCar';
+import Datos from '../components/Datos';
+import Texto from '../components/Texto';
+import Accesorios from '../components/Accesorios';
+import AccesoriosImage from '../components/AccesoriosImage';
+import Contactanos from '../components/Contactanos';
+import Mapa from '../components/Mapa';
+import Contactos from '../components/Contactos';
 
 export default function ImagesTitle() {
 	const [loaded] = useFonts({
@@ -13,7 +24,7 @@ export default function ImagesTitle() {
 
 
 	return (
-		<ScrollView style={styles.containerImage}  >
+		<ScrollView style={styles.containerImage}>
 			<View style={styles.containerTitle}>
 				<Text style={styles.title}>Why Electric Vehicles?</Text>
 			</View>
@@ -22,6 +33,17 @@ export default function ImagesTitle() {
 				<Image source={require('../assets/img2.jpg')} style={styles.img2} />
 				<Image source={require('../assets/img3.jpg')} style={styles.img3} />
 			</View>
+			<Info></Info>
+			<FeaturedItems></FeaturedItems>
+			<Inventario></Inventario>
+
+			<Datos></Datos>
+			<Texto></Texto>
+			<Accesorios></Accesorios>
+
+			<Contactanos></Contactanos>
+			<Mapa></Mapa>
+
 		</ScrollView>
 	)
 }

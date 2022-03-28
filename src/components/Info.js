@@ -1,9 +1,9 @@
 import React from 'react'
-import { View, Text, Image, ScrollView, StyleSheet, Platform } from 'react-native'
+import { View, Text, Image, StyleSheet, Platform, ScrollView } from 'react-native'
 
 export default function Info() {
 	return (
-		<ScrollView style={styles.contentInfo} >
+		<ScrollView style={styles.contentInfo}>
 			<View style={styles.flex}>
 				<View style={styles.contentView}>
 					<Image source={require('../assets/safety.png')} style={styles.icon} />

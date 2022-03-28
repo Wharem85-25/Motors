@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dimensions, StyleSheet, ScrollView, Platform } from 'react-native'
+import { Dimensions, StyleSheet, Platform,ScrollView } from 'react-native'
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { mapStyle } from '../utils/mapStyle';
 

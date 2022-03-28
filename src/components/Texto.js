@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, ScrollView, Image, ImageBackground, Platform } from 'react-native'
+import { View, Text, StyleSheet, ScrollView , Image, ImageBackground, Platform } from 'react-native'
 import { useFonts } from 'expo-font'
 
 export default function Texto() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet } from 'react-native'
+import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, SafeAreaView } from 'react-native'
 import { DATAaccesories } from '../utils/inventarioDb'
 
 const Item = ({ name, price, image }) => (
@@ -26,14 +26,14 @@ export default function AccesoriosImage() {
 	)
 
 	return (
-		<View style={styles.content}>
+		<SafeAreaView style={styles.content}>
 			<FlatList
 				data={DATAaccesories}
 				renderItem={renderItem}
 				keyExtractor={item => item.id}
 				style={styles.cont}
 			/>
-		</View>
+		</SafeAreaView>
 	)
 }
 

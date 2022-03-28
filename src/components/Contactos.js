@@ -1,5 +1,6 @@
 import React from 'react'
-import { ScrollView, View, Text, Image, StyleSheet, Platform } from 'react-native'
+import { View, Text, Image, StyleSheet, Platform } from 'react-native'
+import { ScrollView } from 'react-native-virtualized-view';
 import { useFonts } from 'expo-font'
 
 export default function Contactos() {
