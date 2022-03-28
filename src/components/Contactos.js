@@ -1,6 +1,5 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet, Platform } from 'react-native'
-import { ScrollView } from 'react-native-virtualized-view';
+import { View, Text, Image, StyleSheet, Platform, ScrollView } from 'react-native'
 import { useFonts } from 'expo-font'
 
 export default function Contactos() {
@@ -47,7 +46,7 @@ export default function Contactos() {
 
 const styles = StyleSheet.create({
 	content: {
-		height: Platform.OS === "web" ? 600 : 1000,
+		height: Platform.OS === "web" ? 600 : 1300,
 		backgroundColor: "#000"
 	},
 	flex: {

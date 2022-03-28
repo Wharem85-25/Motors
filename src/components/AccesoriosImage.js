@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, SafeAreaView } from 'react-native'
+import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, SafeAreaView, StatusBar } from 'react-native'
 import { DATAaccesories } from '../utils/inventarioDb'
 
 const Item = ({ name, price, image }) => (
@@ -39,7 +39,8 @@ export default function AccesoriosImage() {
 
 const styles = StyleSheet.create({
 	content: {
-		height: 1600,
+		flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
 	},
 	containerAccesories: {
 		alignItems: "center",

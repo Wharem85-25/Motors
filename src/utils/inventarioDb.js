@@ -40,7 +40,7 @@ export const DATA =[
 		consumo: "81.4kWh",
 		carga: "172kW",
 		tiempo: "4.4s",
-		image1: "https://www.elcarrocolombiano.com/wp-content/uploads/2020/09/20200923-Tesla-Model-S-Plaid-01.jpg",
+		image1: "https://img.remediosdigitales.com/fe35d7/1366_2000/1366_2000.jpg",
 		image2: ""
 	},
 	{

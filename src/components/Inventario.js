@@ -1,8 +1,10 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Platform, ScrollView } from 'react-native';
 import { useFonts } from 'expo-font'
+import { useNavigation } from '@react-navigation/native';
 
 export default function Inventario() {
+	const navigation = useNavigation();
 	const [loaded] = useFonts({
 		rubik: require('../../assets/fonts/Rubik-VariableFont_wght.ttf'),
 	});
@@ -15,7 +17,7 @@ export default function Inventario() {
 		<ScrollView style={styles.container}>
 			<View style={styles.contentTitle}>
 				<Text style={styles.title}>Recently Added</Text>
-				<TouchableOpacity style={styles.contentButton}>
+				<TouchableOpacity style={styles.contentButton} onPress={() => navigation.navigate("Car")}>
 					<Text style={styles.textButton}>View All Inventary</Text>
 				</TouchableOpacity>
 			</View>

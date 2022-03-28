@@ -1,8 +1,10 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet,ScrollView, SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font'
+import { useNavigation } from '@react-navigation/native';
 
 export default function Accesorios() {
+	const navigation = useNavigation();
 	const [loaded] = useFonts({
 		rubik: require('../../assets/fonts/Rubik-VariableFont_wght.ttf'),
 	});
@@ -15,7 +17,7 @@ export default function Accesorios() {
 		<SafeAreaView style={styles.container} >
 			<View style={styles.contentTitle}>
 				<Text style={styles.title}>Ev accessories</Text>
-				<TouchableOpacity style={styles.contentButton}>
+				<TouchableOpacity style={styles.contentButton} onPress={() => navigation.navigate("Accesorios")} >
 					<Text style={styles.textButton}>online Shop</Text>
 				</TouchableOpacity>
 			</View>

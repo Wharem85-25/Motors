@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, Platform, SafeAreaView } from 'react-native'
+import { View, Text, TouchableOpacity, Image, FlatList, StyleSheet, Platform, SafeAreaView, StatusBar } from 'react-native'
 import { DATA } from '../utils/inventarioDb';
 
 const Item = ({ marca, modelo, velocidad, consumo, carga, tiempo, image1 }) => (
@@ -47,19 +47,21 @@ export default function InfoCar() {
 	)
 
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={styles.container}>
 			<FlatList
 				data={DATA}
 				renderItem={renderItem}
 				keyExtractor={item => item.id}
 			/>
-		</View>
+		</SafeAreaView>
 	)
 }
 
 const styles = StyleSheet.create({
 	container: {
-		height: Platform.OS === "web" ? 5700 : 3500,
+		// height: Platform.OS === "web" ? 5700 : 3500,
+    flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
 	},
 	contentInfo: {
 		width: "95%",

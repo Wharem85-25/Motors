@@ -1,14 +1,12 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet, ScrollView, Platform } from 'react-native'
+import { View, Text, Image, StyleSheet, ScrollView, Platform,SafeAreaView } from 'react-native'
 import { useFonts } from 'expo-font'
 import Info from "../components/Info"
 import FeaturedItems from '../components/FeaturedItems'
 import Inventario from '../components/Inventario';
-import InfoCar from '../components/InfoCar';
 import Datos from '../components/Datos';
 import Texto from '../components/Texto';
 import Accesorios from '../components/Accesorios';
-import AccesoriosImage from '../components/AccesoriosImage';
 import Contactanos from '../components/Contactanos';
 import Mapa from '../components/Mapa';
 import Contactos from '../components/Contactos';
@@ -36,14 +34,12 @@ export default function ImagesTitle() {
 			<Info></Info>
 			<FeaturedItems></FeaturedItems>
 			<Inventario></Inventario>
-
 			<Datos></Datos>
 			<Texto></Texto>
 			<Accesorios></Accesorios>
-
 			<Contactanos></Contactanos>
 			<Mapa></Mapa>
-
+			<Contactos></Contactos>
 		</ScrollView>
 	)
 }
