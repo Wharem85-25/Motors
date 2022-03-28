@@ -29,6 +29,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Replica de la pagina motors",
+    "githubUrl": "https://github.com/Wharem85-25/Motors"
   }
 }
